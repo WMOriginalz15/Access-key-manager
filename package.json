@@ -1,0 +1,16 @@
+{
+  "name": "access_key_amalitech",
+  "version": "1.0.0",
+  "description": "This is the first step to controlling the version of the project. Containing files for the landing page and also the sign in and sign up forms with little functionality",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mysql": "^2.18.1"
+  }
+}
