@@ -44,19 +44,21 @@
                 <h2>LOGIN</h2>
                 <form action="#">
                     <div class="input-field">
-                        <input type="text" required>
+                        <input type="text" name="name" required>
+                        <label>Enter your full name</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="email" required>
                         <label>Email</label>
                     </div>
                    <div class="input-field">
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <label>Password</label>
                     </div>
 
                     <div class="input-field">
-                        <!-- <input type="text" required> -->
-                        <!-- <label>Position</label> -->
                         <p class="paragraph">Position</p>
-                        <select id="position">
+                        <select id="position"  name="position" required>
                             <option value="position">Micro-Focus Admin</option>
                             <option value="position">School IT Personnel</option>
                         </select>
@@ -80,23 +82,21 @@
                 <h2>SIGNUP</h2>
                 <form action="#">
                     <div class="input-field">
-                        <input type="text" required>
+                        <input type="text" name="name" required>
+                        <label>Enter your full name</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" name="email" required>
                         <label>Enter your email</label>
                     </div>
                     <div class="input-field">
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <label>Create password</label>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" required>
-                        <label>Confirm password</label>
                     </div>
 
                     <div class="input-field">
-                        <!-- <input type="text" required> -->
-                        <!-- <label>Position</label> -->
                         <p class="paragraph">Position</p>
-                        <select id="position">
+                        <select id="position" name="position" required>
                             <option value="position">Micro-Focus Admin</option>
                             <option value="position">School IT Personnel</option>
                         </select>
