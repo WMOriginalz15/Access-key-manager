@@ -5,7 +5,8 @@ const tokenSchema = new Schema({
     name: {
         type: String,
         required: true,
-        length: 100
+        length: 100,
+        unique: true
     },
     procurement: {
         type: String,
@@ -19,6 +20,6 @@ const tokenSchema = new Schema({
     }
 });
 
-const Token = mongoose.model('users', tokenSchema);
+const Token = mongoose.model('token', tokenSchema);
 
 module.exports = Token;
