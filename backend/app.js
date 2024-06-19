@@ -3,7 +3,9 @@ const path = require('path');
 const mongoose = require('mongoose');
 const User = require('./models/user_model')
 const authRoutes = require('./routes/auth_routes')
-const cookieParser = require('cookie-parser')
+const cookieParser = require('cookie-parser');
+const { Server } = require('https');
+const { requireAuth } = require('./middleware/authMiddleware');
 
 
 const app = express();
@@ -27,8 +29,12 @@ app.get('/admin', (req, res) => {
     res.render('admin.ejs')
 })
 
-app.get('/personnel', (req, res) => {
+app.get('/personnel', requireAuth, (req, res) => {
     res.render('it_personnel_home.ejs')
+})
+
+app.get('/dashboard', (req, res) => {
+    res.render('admin_home.ejs')
 })
 
  // trials of the model 
@@ -54,4 +60,3 @@ mongoose.connect(dbURI).then(
     
 
 ).catch((error) => console.log(error))
-

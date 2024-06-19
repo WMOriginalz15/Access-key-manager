@@ -47,7 +47,7 @@ module.exports.login_get = (req, res) => {
 }
 
 module.exports.signup_post = async (req, res) => {
-    const {email, password} = req.body;
+    const {email, password, position} = req.body;
 
     try {
         const user = await User.create({email, password})
@@ -72,4 +72,9 @@ module.exports.login_post = async (req, res) => {
         const errors = handleErrors(err)
         res.status(400).json({errors});
     } 
+}
+
+module.exports.logout_get = (req, res) => {
+    res.cookie('jwt', '', {maxAge: 1});
+    res.redirect('/');
 }
