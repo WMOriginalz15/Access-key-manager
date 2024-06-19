@@ -16,6 +16,6 @@ const tokenStatusSchema = new Schema({
     }
 });
 
-const Status = mongoose.model('users', tokenStatusSchema);
+const Status = mongoose.model('token_about', tokenStatusSchema);
 
 module.exports = Status;
